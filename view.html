@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+ <head>
+  <title>How to get data from MySQL with AngularJS - PHP</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+ <style type="text/css">
+   .angular-with-newlines {
+   
+    white-space: pre-wrap !important;
+
+}
+ </style>
+ <script type="text/javascript">
+  angular.module('myapp').
+filter('nlToArray', function() {
+  return function(text) {
+      return text.split('\n');
+  };
+});
+ </script>
+ </head>
+ <body ng-app='myapp'>
+
+  <div ng-controller="userCtrl">
+ 
+    <table >
+ 
+      <tr>
+        <th>News Title</th>
+        <th>Description</th>
+       
+      </tr>
+      <tr ng-repeat="news in news">
+        <td>{{news.newstitle}}</td>
+       
+        <td><p class="angular-with-newlines">{{news.description}}</p></td>
+       </tr>
+
+    </table>
+
+  </div>
+ <script type="text/javascript">
+   var fetch = angular.module('myapp', []);
+
+fetch.controller('userCtrl', ['$scope', '$http', function ($scope, $http) {
+ $http({
+  method: 'get',
+  url: 'getData.php'
+ }).then(function successCallback(response) {
+  // Store response data
+  $scope.news = response.data;
+ });
+}]);
+ </script>
+ 
+ </body>
+</html>
