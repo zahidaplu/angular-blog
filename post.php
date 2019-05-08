@@ -8,11 +8,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <meta property="og:url"           content="http://tea-trader.co.uk/techneo" />
-  <meta property="og:type"          content="website" />
-  <meta property="og:title"         content="Is Google teasing new Pixel phones for May 7?" />
-  <meta property="og:description"   content="The teaser section is accompanied by a video for a commercial of Avengers: Endgame, wherein the Google Assistant and Pixel 3's various camera features " />
-  <meta property="og:image"         content="http://tea-trader.co.uk/techneo/img/post-bg.jpg" />
+
+ 
 
 
 
